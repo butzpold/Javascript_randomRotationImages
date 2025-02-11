@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+    
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <title>randomRotationImage</title>
+        <script src = "jquery-3.7.1.min.js"></script> 
+    </head>
+
+<section class="clients">
+    <div class="container">
+        <div class="row" style="height: 120px">
+            <div class="col" style="align-content: center">
+                <img src="images/svg/client_0.svg" class="client-image" id="client_img_0">
+            </div>
+            <div class="col" style="align-content: center">
+                <img src="images/svg/client_1.svg" class="client-image" id="client_img_1">
+            </div>
+            <div class="col" style="align-content: center">
+                <img src="images/svg/client_2.svg" class="client-image" id="client_img_2">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        const clientImages = [
+            "images/svg/client_3",
+            "images/svg/client_4",
+        ];
+
+        function randomRotationImages(){
+            const srcImg = document.getElementsByClassName("client-image");
+            var randomNumber = Math.floor(Math.random()*srcImg.length);
+            var clientImageId = "client_img_" + randomNumber;
+            var newClientImage = clientImages.shift();
+            // "shift()" um das erste Element aus dem Array clientImages auszuwählen und aus dem Array zu entfernen
+            var oldClientImage = document.getElementById(clientImageId).attributes.src.nodeValue;
+            // speichert den Pfad des Bildes ohne Domain und Workspace welches im Folgenden ersetzt wird
+            clientImages.push(oldClientImage)
+            document.getElementById(clientImageId).setAttribute("src", newClientImage);
+        };
+
+        setInterval(randomRotationImages, 500)
+
+    </script>
+</section>
