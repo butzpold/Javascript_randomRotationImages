@@ -1,0 +1,15 @@
+@import "lib/bootstrap/scss/bootstrap.scss";
+
+.clients {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.client-image {
+    max-height: 120px;
+    height: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
