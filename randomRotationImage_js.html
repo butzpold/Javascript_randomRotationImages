@@ -39,11 +39,11 @@
             // "shift()" um das erste Element aus dem Array clientImages auszuwählen und aus dem Array zu entfernen
             var oldClientImage = document.getElementById(clientImageId).attributes.src.nodeValue;
             // speichert den Pfad des Bildes ohne Domain und Workspace welches im Folgenden ersetzt wird
-            clientImages.push(oldClientImage)
+            clientImages.push(oldClientImage);
             document.getElementById(clientImageId).setAttribute("src", newClientImage);
         };
 
-        setInterval(randomRotationImages, 500)
+        setInterval(randomRotationImages, 500);
 
     </script>
 </section>
