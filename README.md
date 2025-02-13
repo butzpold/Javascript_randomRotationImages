@@ -9,5 +9,3 @@ The paths with ids of the displayed images have to be set initially as well the 
 On the amount of image columns the function reacts automatically.
 
 The jquery version adds the fadeOut/fadeIn-method to get smoother transitions.
-
-New Fork added
