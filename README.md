@@ -10,3 +10,4 @@ On the amount of image columns the function reacts automatically.
 
 The jquery version adds the fadeOut/fadeIn-method to get smoother transitions.
 
+New Fork added
